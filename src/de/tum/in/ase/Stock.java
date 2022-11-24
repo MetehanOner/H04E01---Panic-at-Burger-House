@@ -2,6 +2,8 @@ package de.tum.in.ase;
 
 public class Stock {
     //TODO: Implement Part 1
+    public StockIngredient stockIngredients;
+
     public int add(String a){
         return 0;
     }
