@@ -58,7 +58,7 @@ public class Stock {
     }
 
     public List<StockIngredient> getStockIngredients() {
-        return stockIngredients;
+        return new ArrayList<>(this.stockIngredients);
     }
 
     //TODO: Implement Part 2bb
