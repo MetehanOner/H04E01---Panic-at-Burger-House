@@ -6,7 +6,7 @@ import java.util.Objects;
 
 public class Stock {
     //TODO: Implement Part 1
-    public List<StockIngredient> stockIngredients = new ArrayList<>();
+    private List<StockIngredient> stockIngredients = new ArrayList<>();
 
     public Stock(){
         //StockIngredient s = new StockIngredient("u",0,0);
