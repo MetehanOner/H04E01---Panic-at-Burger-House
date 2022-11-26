@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Stock {
     //TODO: Implement Part 1
-    public List<StockIngredient> stockIngredients;
+    private List<StockIngredient> stockIngredients;
 
     public int add(String a){
         return 0;

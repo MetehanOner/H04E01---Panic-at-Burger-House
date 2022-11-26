@@ -19,11 +19,7 @@ public class StockIngredient {
             setPrice(price);
         }
 
-        if(quantity < 0){
-            setQuantity(0);
-        } else {
-            setQuantity(quantity);
-        }
+        setQuantity(quantity);
 
     }
 
@@ -36,7 +32,11 @@ public class StockIngredient {
     }
 
     public void setQuantity(int quantity) {
-        this.quantity = quantity;
+        if(quantity < 0){
+            this.quantity = 0;
+        } else {
+            this.quantity = quantity;
+        }
     }
 
     public String getName() {

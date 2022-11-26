@@ -4,7 +4,7 @@ import java.util.List;
 
 public class BurgerShop {
     //TODO: Implement Part 1
-    public List<Burger> orders;
+    private List<Burger> orders;
     private Stock stock;
 
     public int calculateTotalPrice(Burger burger){
