@@ -6,12 +6,12 @@ import java.util.Objects;
 
 public class Stock {
     //TODO: Implement Part 1
-    private List<StockIngredient> stockIngredients = new ArrayList<>();
+    public List<StockIngredient> stockIngredients = new ArrayList<>();
 
     public Stock(){
-        StockIngredient s = new StockIngredient("u",0,0);
-        stockIngredients.add(s);
-        setStockIngredients(stockIngredients);
+        //StockIngredient s = new StockIngredient("u",0,0);
+        //stockIngredients.add(s);
+        //setStockIngredients(stockIngredients);
     }
 
     public int add(String name){
