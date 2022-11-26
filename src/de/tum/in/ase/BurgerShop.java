@@ -9,7 +9,8 @@ public class BurgerShop {
     private Stock stock;
 
     public BurgerShop(){
-        setStock(stock);
+        Stock s = new Stock();
+        setStock(s);
         setOrders(orders);
     }
 
