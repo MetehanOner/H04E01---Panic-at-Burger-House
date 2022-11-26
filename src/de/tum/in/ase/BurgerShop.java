@@ -35,14 +35,15 @@ public class BurgerShop {
     public void acceptSupplyDelivery(String name, int price, int quantity){
 
         StockIngredient fresh = new StockIngredient(name, price, quantity);
+        Stock c = getStock();
 
         int qNew = 0;
-        for(int i=0; i < getStock().getStockIngredients().size(); i++){
-            if(getStock().findStockIngredient(name) == fresh){
-                qNew = fresh.getQuantity() + getStock().findStockIngredient(name).getQuantity();
-                getStock().findStockIngredient(name).setQuantity(qNew);
+        for(int i=0; i < c.getStockIngredients().size(); i++){
+            if(c.findStockIngredient(name) == fresh){
+                qNew = quantity + c.findStockIngredient(name).getQuantity();
+                c.findStockIngredient(name).setQuantity(qNew);
             } else {
-                getStock().getStockIngredients().add(fresh);
+                c.getStockIngredients().add(fresh);
             }
         }
     }
