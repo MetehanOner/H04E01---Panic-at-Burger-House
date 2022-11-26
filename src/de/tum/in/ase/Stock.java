@@ -11,8 +11,6 @@ public class Stock {
     public Stock(){
         List<StockIngredient> stockIngredients = new ArrayList<>();
         setStockIngredients(stockIngredients);
-        StockIngredient s = new StockIngredient("u",0,0);
-        getStockIngredients().add(s);
     }
 
     public int add(String name){
