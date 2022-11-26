@@ -8,6 +8,11 @@ public class BurgerShop {
     private List<Burger> orders;
     private Stock stock;
 
+    public BurgerShop(){
+        setStock(stock);
+        setOrders(orders);
+    }
+
     public int calculateTotalPrice(Burger burger){
 
         List<String> burgerIngredients = burger.getIngredients();
@@ -40,6 +45,8 @@ public class BurgerShop {
     }
 
     public void orderBurger(Burger burger){
+
+
 
 
     }

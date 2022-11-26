@@ -9,9 +9,10 @@ public class Stock {
     private List<StockIngredient> stockIngredients = new ArrayList<>();
 
     public Stock(){
-        //StockIngredient s = new StockIngredient("u",0,0);
-        //stockIngredients.add(s);
-        //setStockIngredients(stockIngredients);
+        setStockIngredients(stockIngredients);
+        StockIngredient s = new StockIngredient("u",0,0);
+        getStockIngredients().add(s);
+
     }
 
     public int add(String name){
