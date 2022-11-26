@@ -13,7 +13,7 @@ public class BurgerShop {
         List<String> burgerIngredients = burger.getIngredients();
 
         int cost = 0;
-        for(int i = 0; i < burgerIngredients.size(); i++){
+        for(int i = 0; i < getStock().getStockIngredients().size(); i++){
             if(getStock().findStockIngredient(burgerIngredients.get(i))!=null){
                 if(Objects.equals(burgerIngredients.get(i), getStock().findStockIngredient(burgerIngredients.get(i)).getName())){
                     cost += getStock().findStockIngredient(burgerIngredients.get(i)).getPrice();
@@ -26,9 +26,21 @@ public class BurgerShop {
 
     public void acceptSupplyDelivery(String name, int price, int quantity){
 
+        StockIngredient fresh = new StockIngredient(name, price, quantity);
+
+        int qNew = 0;
+        for(int i=0; i < getStock().getStockIngredients().size(); i++){
+            if(getStock().findStockIngredient(fresh.getName()) != null && getStock().findStockIngredient(fresh.getName()) == fresh){
+                qNew = fresh.getQuantity() + getStock().findStockIngredient(fresh.getName()).getQuantity();
+                getStock().findStockIngredient(fresh.getName()).setQuantity(qNew);
+            } else {
+                getStock().getStockIngredients().add(fresh);
+            }
+        }
     }
 
     public void orderBurger(Burger burger){
+
 
     }
 
