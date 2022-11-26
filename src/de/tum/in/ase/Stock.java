@@ -8,6 +8,10 @@ public class Stock {
     //TODO: Implement Part 1
     private List<StockIngredient> stockIngredients = new ArrayList<>();
 
+    public Stock(){
+        setStockIngredients(stockIngredients);
+    }
+
     public int add(String name){
 
         StockIngredient s = findStockIngredient(name);
