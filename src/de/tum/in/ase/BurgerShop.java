@@ -11,8 +11,8 @@ public class BurgerShop {
         return 0;
     }
 
-    public int acceptSupplyDelivery(String name){
-        return 0;
+    public void acceptSupplyDelivery(String name){
+
     }
 
     public void orderBurger(Burger burger){
