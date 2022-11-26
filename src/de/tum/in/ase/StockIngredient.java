@@ -1,7 +1,7 @@
 package de.tum.in.ase;
 
 public class StockIngredient {
-    //TODO: Implement Part 1
+    //TODO: Implement Part 1 added
     private String name;
     private int price;
     private int quantity;
