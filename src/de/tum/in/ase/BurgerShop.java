@@ -1,6 +1,7 @@
 package de.tum.in.ase;
 
 import java.util.List;
+import java.util.Objects;
 
 public class BurgerShop {
     //TODO: Implement Part 1
@@ -8,7 +9,19 @@ public class BurgerShop {
     private Stock stock;
 
     public int calculateTotalPrice(Burger burger){
-        return 0;
+
+        List<String> burgerIngredients = burger.getIngredients();
+
+        int cost = 0;
+        for(int i = 0; i < burgerIngredients.size(); i++){
+            if(getStock().findStockIngredient(burgerIngredients.get(i))!=null){
+                if(Objects.equals(burgerIngredients.get(i), getStock().findStockIngredient(burgerIngredients.get(i)).getName())){
+                    cost += getStock().findStockIngredient(burgerIngredients.get(i)).getPrice();
+                }
+            }
+        }
+
+        return cost;
     }
 
     public void acceptSupplyDelivery(String name, int price, int quantity){

@@ -35,7 +35,7 @@ public class Stock {
         return s.getQuantity();
     }
     
-    public StockIngredient findStockIngredient(String name){
+    public StockIngredient findStockIngredient(String name) {
 
         for(int i = 0; i < getStockIngredients().size(); i++){
             if(Objects.equals(getStockIngredients().get(i).getName(), name)){
