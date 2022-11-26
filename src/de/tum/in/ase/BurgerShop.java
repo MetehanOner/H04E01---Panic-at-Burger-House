@@ -19,7 +19,7 @@ public class BurgerShop {
         List<String> burgerIngredients = burger.getIngredients();
 
         int cost = 0;
-        for(int i = 0; i < getStock().getStockIngredients().size(); i++){
+        for(int i = 0; i < getStock().getStockIngredients().size()-1; i++){
             if(getStock().findStockIngredient(burgerIngredients.get(i))!=null){
                 if(Objects.equals(burgerIngredients.get(i), getStock().findStockIngredient(burgerIngredients.get(i)).getName())){
                     cost += getStock().findStockIngredient(burgerIngredients.get(i)).getPrice();
