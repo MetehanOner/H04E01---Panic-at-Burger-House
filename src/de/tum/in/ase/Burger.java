@@ -20,8 +20,6 @@ public class Burger {
             setIngredients(ingredients);
         }
 
-
-
     }
 
     public void setName(String name) {
