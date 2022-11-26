@@ -1,13 +1,19 @@
 package de.tum.in.ase;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Stock {
     //TODO: Implement Part 1
-    private List<StockIngredient> stockIngredients;
+    private List<StockIngredient> stockIngredients = new ArrayList<>();
 
-    public int add(String a){
+    public int add(String name){
+        if(!(stockIngredients==null)){
+            return -1;
+        }
+
         return 0;
+
     }
     
     public int take(String a){
