@@ -3,7 +3,7 @@ package de.tum.in.ase;
 import java.util.List;
 
 public class Burger {
-    //TODO: Implement Part 1
+    //TODO: Implement Part 1 added
     private String name;
     private List<String> ingredients;
 
