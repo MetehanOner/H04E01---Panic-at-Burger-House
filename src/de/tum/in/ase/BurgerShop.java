@@ -11,7 +11,7 @@ public class BurgerShop {
         return 0;
     }
 
-    public void acceptSupplyDelivery(String name){
+    public void acceptSupplyDelivery(String name, int price, int quantity){
 
     }
 
