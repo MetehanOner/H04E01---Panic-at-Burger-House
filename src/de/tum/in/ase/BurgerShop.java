@@ -35,7 +35,7 @@ public class BurgerShop {
         StockIngredient fresh = new StockIngredient(name, price, quantity);
 
         int qNew = 0;
-        for(int i=0; i < getStock().getStockIngredients().size(); i++){
+        for(int i=0; i < getStock().getStockIngredients().size()-1; i++){
             if(getStock().findStockIngredient(fresh.getName()) != null && getStock().findStockIngredient(fresh.getName()) == fresh){
                 qNew = fresh.getQuantity() + getStock().findStockIngredient(fresh.getName()).getQuantity();
                 getStock().findStockIngredient(fresh.getName()).setQuantity(qNew);
