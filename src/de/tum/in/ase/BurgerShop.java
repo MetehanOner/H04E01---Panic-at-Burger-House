@@ -51,7 +51,6 @@ public class BurgerShop {
     }
 
     public void checkOrderReady(){
-
         if(getOrders().size() == 0){
             return;
         }
@@ -60,7 +59,7 @@ public class BurgerShop {
            for(int j=0; j < getOrders().get(i).getIngredients().size(); j++){
 
                StockIngredient s = getStock().findStockIngredient(getOrders().get(i).getIngredients().get(j));
-               if(s.getQuantity()<=0){
+               if(s == null && s.getQuantity()<=0){
                    return;
                }
 
