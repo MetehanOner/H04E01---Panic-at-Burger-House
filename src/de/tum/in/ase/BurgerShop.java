@@ -1,8 +1,6 @@
 package de.tum.in.ase;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 public class BurgerShop {
     //TODO: Implement Part 1
@@ -45,12 +43,33 @@ public class BurgerShop {
     }
 
     public void orderBurger(Burger burger){
+        getOrders().add(burger);
+        List<String> burgerIngredients = burger.getIngredients();
 
-
+        checkOrderReady();
 
     }
 
     public void checkOrderReady(){
+
+        if(getOrders().size() == 0){
+            return;
+        }
+
+        for(int i=0; i < getOrders().size(); i++){
+           for(int j=0; j < getOrders().get(i).getIngredients().size(); j++){
+
+               StockIngredient s = getStock().findStockIngredient(getOrders().get(i).getIngredients().get(j));
+               if(s.getQuantity()<=0){
+                   return;
+               }
+
+           }
+
+
+           System.out.println("The order is ready: " + getOrders().get(i).getName());
+           getOrders().remove(getOrders().get(i));
+        }
 
     }
 
@@ -69,8 +88,4 @@ public class BurgerShop {
     public Stock getStock() {
         return stock;
     }
-
-    //TODO: Implement Part 3
-
-    //TODO: Implement Part 4
 }

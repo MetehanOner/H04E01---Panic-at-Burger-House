@@ -1,5 +1,6 @@
 package de.tum.in.ase;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Burger {
@@ -15,7 +16,8 @@ public class Burger {
         }
 
         if (ingredients == null){
-            setIngredients(null);
+            List<String> iList = new ArrayList<>();
+            setIngredients(iList);
         } else {
             setIngredients(ingredients);
         }
