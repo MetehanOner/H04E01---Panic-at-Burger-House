@@ -56,16 +56,18 @@ public class BurgerShop {
         }
 
         for(int i=0; i < getOrders().size(); i++){
+            String currentIngredient = "";
            for(int j=0; j < getOrders().get(i).getIngredients().size(); j++){
+               currentIngredient = getOrders().get(i).getIngredients().get(j);
 
-               StockIngredient s = getStock().findStockIngredient(getOrders().get(i).getIngredients().get(j));
-               if(s == null && s.getQuantity()<=0){
+               StockIngredient s = getStock().findStockIngredient(currentIngredient);
+               if(s == null || s.getQuantity()<=0){
                    return;
                }
 
            }
 
-
+           getStock().take(currentIngredient);
            System.out.println("The order is ready: " + getOrders().get(i).getName());
            getOrders().remove(getOrders().get(i));
         }
